@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENT FINANCIAL $ PERFOMANCE CHECKER</title>
+  <link rel="stylesheet" href="trial.css">
+</head>
+
+<body>
+
+  <!--STUDENT FINANCE ANALYZER  -->
+  <header>
+    <h1 class="head-text">Student Financial & Performance Analyzer</h1>
+    <p class="par">Enter your details below to get your
+      financial summary and academic report.
+    </p>
+  </header>
+  <main>
+    <div class="students-infor">
+      <h2>Students Information</h2>
+      <div class="details">
+        <div class="input-fields">
+          <label class="labels">Full Name</label>
+          <input type="text" class="inputs" id="Name">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Year of Birth</label>
+          <input type="number" class="inputs" id="age">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Course Study</label>
+          <input type="text" class="inputs" id="course">
+        </div>
+      </div>
+    </div>
+    <div class="students-infor">
+      <h2>Financial Details (ksh)</h2>
+      <div class="details">
+        <div class="input-fields">
+          <label class="labels">Monthly Allowance</label>
+          <input type="number" class="inputs" id="monthlyIncome">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Rent</label>
+          <input type="number" class="inputs" id="rent">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Food Expenses</label>
+          <input type="number" class="inputs" id="food">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Transport Expenses</label>
+          <input type="number" class="inputs" id="transport">
+        </div>
+        <div class="input-fields">
+          <label class="labels">Other Expenses</label>
+          <input type="number" class="inputs" id="otherExpenses">
+        </div>
+      </div>
+    </div>
+    <div class="students-infor">
+      <h2>Exam score</h2>
+      <div class="details">
+        <div class="input-fields">
+          <label class="labels">Enter your exam score (0 - 100)</label>
+          <input type="number" class="inputs" id="score">
+          <p id="invalid"></p>
+        </div>
+      </div>
+    </div>
+    <button type="button" id="submitBtn">Analyze My Details</button>
+  </main>
+  <div class="report" id="reportbar">
+    <div class="footer">
+      <div class="students-report">
+        <h3>Students Report</h3>
+        <div class="students-values">
+          <label class="h4">Name:</label>
+          <p class="report-text" id="students-name"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Course:</label>
+          <p class="report-text" id="students-course"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Age:</label>
+          <p class="report-text" id="students-age"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Score:</label>
+          <p class="report-text" id="students-score"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Performance:</label>
+          <p class="report-text" id="students-performance"></p>
+        </div>
+
+      </div>
+      <div class="summary">
+        <h4>Financial Summary</h4>
+        <div class="students-values">
+          <label class="h4">Total Expenses:</label>
+          <p class="report-text" id="totalExpenses"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Remaining Money:</label>
+          <p class="report-text" id="remainingMoney"></p>
+        </div>
+        <div class="students-values">
+          <label class="h4">Spent Money:</label>
+          <p class="report-text" id="spentPercentage"></p>
+        </div>
+      </div>
+    </div>
+    <div class="finalMessage">
+      <h3>Final Message</h3>
+      <p id="finalMessage"></p>
+    </div>
+  </div>
+
+<!-- SMART SHOP CHECKOUT -->
+
+<div class="shop">
+  <h1>SMART SHOP CHECKOUT</h1>
+  <div class="input">
+    <label>Customer Name:</label>
+    <input type="text" id="custName"><br>
+        <label>Your Age:</label>
+    <input type="number" id="custAge"><br>
+    <label>Select a Product:</label>
+    <select id="products">
+      <option value="" >-- Select a product --</option>
+      <option value="Keyboard">Keyboard</option>
+      <option value="Microphone">Microphone</option>
+      <option value="Speaker">Speaker</option>
+      <option value="Headphones">Headphones</option>
+    </select><br>
+    <label>Quantity:</label>
+    <input type="number" id="quantity"><br>
+    <label>Your Amount:</label>
+    <input type="number" id="custAmount"><br>
+    <label for="discount">I have a discount code</label>
+    <input type="checkbox" id="discount"><br>
+    <label>Enter discount code(If you have):</label>
+    <input type="number" id="code"><br>
+    <p id="errors" ></p id="errors">
+    <button id="complete">Complete Purchase</button>
+  </div>
+</div>
+
+<div class="resultShop">
+  <p id="custname"></p>
+  <p id="prod"></p>
+  <p id="quant"></p>
+  <p id="unitprice"></p>
+  <p id="subtotal"></p>
+  <p id="disc"></p>
+  <p id="total"></p>
+  <p id="paym"></p>
+  <p id="balance"></p>
+  <p id="status"></p>
+</div>
+
+<!-- MINI GAME APP -->
+  <div class="games">
+    <h1>MINI GAME STORE</h1>
+    <P>Your favourite games.One Place.</P>
+  </div>
+  <div class="text-game">
+    <h2>Purchase a Game here</h2>
+    <p>Fill in the details below to buy your favourite Game</p><br>
+
+    <label>Customer Name</label>
+    <input type="text" placeholder="Enter your name" id="customersName">
+    <p id="emptyName"></p>
+    <label>Age</label>
+    <input placeholder="Enter your age" id="customersAge">
+    <p id="emptyName1"></p>
+    <label>Payment Method</label>
+    <select id="payment">
+      <option value="">Select a payment Method</option>
+      <option value="Mpesa">Mpesa</option>
+      <option value="Bank">Bank</option>
+    </select>
+    <p id="emptyName3"></p>
+    <label>Choose a Game</label>
+    <select id="games">
+      <option value="">Select a Game</option>
+      <option class="fifa" value="Fifa">Fifa</option>
+      <option value="Minecraft">Minecraft</option>
+      <option value="Gta">Gta</option>
+      <option value="Fortnite">Fortnite</option>
+    </select>
+    <p id="emptyName4"></p>
+    <label>Amount paid</label>
+    <input type="text" placeholder="Enter amount" id="customersAmount">
+    <p id="emptyName5"></p>
+    <input type="checkbox" id="terms" class="not-block">
+    <label class="not-block">I agree to terms and conditions</label>
+    <p id="warning"></p>
+  </div>
+  <button type="button" id="buyGame">Buy Game</button>
+
+
+
+  <div class="gameSummary">
+    <h2>Purchase Summary</h2>
+    <h3 id="approval">Purchase Approved!</h3>
+    <table>
+      <tr>
+        <td>Customers name:</td>
+        <td id="buyerName"></td>
+
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td id="buyerAge"></td>
+      </tr>
+      <tr>
+        <td>Game:</td>
+        <td id="buyerGame"></td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td id="buyerPrice"></td>
+      </tr>
+      <tr>
+        <td>Payment Method:</td>
+        <td id="buyerPayment"></td>
+      </tr>
+      <tr>
+        <td>Amount Paid:</td>
+        <td id="buyerpaid"></td>
+      </tr>
+      <tr>
+        <td>Balance:</td>
+        <td id="buyerBalance"></td>
+      </tr>
+    </table>
+    <p>Thank You for your purchase.</p>
+  </div>
+
+  <div class="profile">
+    <label >Full Name *</label>
+    <input type="text" placeholder="e.g Patrick Ndung'u" id="studentsName">
+    <label >Course *</label>
+    <input type="text" placeholder="e.g Mathematics" id="studentsCourse">
+    <label >Year of study*</label>
+    <input type="number" placeholder="e.g 2" id="studentsYear">
+    <label >Your age *</label>
+    <input type="number" placeholder="e.g 20" id="studentsAge">
+    <label>Select Favourite Language*</label>
+    <select id="favourite">
+      <option value=""> -- Favourite Language --</option>
+      <option value="Python"> Python</option>
+      <option value="Javascript"> Javascript</option>
+      <option value="PHP"> PHP</option>
+      <option value="Java"> Java</option>
+    </select>
+    <label>Skills*</label>
+    <input type="text" placeholder="e.g HTML, CSS, Javascript" id="skills">
+    <label for="checkbox" id="checklabel">Available for projects?</label>
+    <input type="checkbox" id="checkbox">
+    <button id="profile">Generate Profile</button>
+  </div>
+
+  <div class="myprofile">
+    <h2 class="h2">Profile page</h2>
+    <p class="dp"></p>
+    <p id="myNames"></p>
+    <p id="myCourse"></p>
+    <p id="myStudy"></p>
+    <p id="myAge"></p>
+    <p id="myLanguage"></p>
+    <p id="mySkills"></p>
+    <p id="Ready"></p>
+  </div>
+
+
+  <footer>
+    <ul>
+      <li class="no-dot">Plan well</li>
+      <li>Spend Wisely</li>
+      <li>Achieve more</li>
+    </ul>
+  </footer>
+  <script src="trial.js"></script>
+</body>
+
+</html>

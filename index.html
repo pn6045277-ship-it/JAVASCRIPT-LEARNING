@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING JAVASCRIPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="myH1"></h1>
+    <h2 id="myP"></h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <input type="text" id="myName" placeholder="your name"><br><br>
+    <input id="myAge" placeholder="year of birth"><br><br>
+    <input id="myGender" placeholder="gender"><br><br>
+    <input id="myCourse" placeholder="your course study"><br><br>
+    <button type="submit" id="myBtn">Submit</button><br><br>
+
+
+    <h2>Enter radius of a circle;</h2>
+    <input type="number" id="radius">
+    <button id="calculate">Calculate</button>
+    <h2 id="circumference"></h2>
+
+    <h2>COUNTER</h2>
+    <label id="countLabel">0</label><br>
+    <div id="button-container">
+        <button id="decreaseBtn">Decrease</button>
+        <button id="resetBtn">Reset</button>
+        <button id="increaseBtn">Increase</button>
+    </div>
+
+    <h1>Rolling a dice</h1>
+    <button id="generate">ROLL</button><br>
+    <label id="mylabel1" class="labels"></label>
+    <label id="mylabel2" class="labels"></label> 
+    <label id="mylabel3" class="labels"></label> <br>
+    
+    <label>Enter your age:</label>  
+    <input type="number" id="myText"><br>
+    <button type="submit" id="mySubmit">Submit</button>
+    <p id="paragraph"></p>
+
+    <input type="checkbox" id="myCheckBox">
+    <label for="myCheckBox">Subscribe</label><br>
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label><br>
+    <input type="radio" id="masterCard" name="card">
+    <label for="masterCard">Master Card</label><br>
+    <input type="radio" id="paypal" name="card">
+    <label for="paypal">Paypal</label><br>
+
+    <button type="submit" id="submitCards">Submit</button>
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+
+    <label>Enter your name:</label>
+    <input type="text" id="nameChanger"><br>
+    <button id="greet">Greet Me</button>
+    <p id="greetings"></p>
+
+    <label>Enter a password:</label>
+    <input type="number" id="pass"><br>
+    <button id="loop">SUBMIT</button>
+    <p id="attempts"></p>
+
+    <form class="form">  
+        <h1>Temperature Conversion:</h1>
+        <input type="number" id="textBox" value=""><br>
+        <input type="radio" id="radioBtn1" name="temps">
+        <label for="radioBtn1">Celcius to Kelvin</label><br>
+        <input type="radio" id="radioBtn2" name="temps">
+        <label for="radioBtn2">Kelvin to Celcius</label>
+        <br><button type="button" onclick="convert()">Convert</button>
+        <p id="answer"></p>
+    </form><br>
+
+    <form>
+        <h2>ATM FORM</h2>
+        <input type="radio" id="balanceAtm" name="radio">
+        <label for="balanceAtm" >Check Balance</label><br>
+        <input type="radio" id="withdrawAtm" name="radio">
+        <label for="withdrawAtm">Withdraw money</label><br>
+        <input type="radio" id="depAtm" name="radio">
+        <label for="depAtm">Deposit money</label><br>
+        <button type="button"  onclick="user_service()">Send</button>
+    </form>
+    
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
