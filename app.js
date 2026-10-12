@@ -822,3 +822,5 @@ console.log(`Total sales = ${allTogether[0]}.`);
 console.log(`Highest sales = ${allTogether[1]}.`);
 console.log(`Lowest sales = ${allTogether[2]}.`);
 console.log(`Average sales = ${allTogether[3]}.`);
+
+//Next 
