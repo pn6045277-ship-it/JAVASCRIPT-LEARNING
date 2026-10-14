@@ -807,18 +807,73 @@ let fruit = ["apple", "orange", "banana"];
 
 let sum = 0;
 let allTogether;
-function analyzer(sales){
-  for(let i = 0; i<sales.length;i++){
+function analyzer(sales) {
+  for (let i = 0; i < sales.length; i++) {
     sum += sales[i];
   }
   let maxim = Math.max(...sales);
   let minim = Math.min(...sales);
-  let av = sum/sales.length;
-  allTogether = [sum,maxim,minim,av];
+  let av = sum / sales.length;
+  allTogether = [sum, maxim, minim, av];
   return allTogether;
 }
-analyzer([100,200,500,800]);
+analyzer([100, 200, 500, 800]);
 console.log(`Total sales = ${allTogether[0]}.`);
 console.log(`Highest sales = ${allTogether[1]}.`);
 console.log(`Lowest sales = ${allTogether[2]}.`);
 console.log(`Average sales = ${allTogether[3]}.`);
+
+//REST PARAMETER  = (...rest) allow a func work with a variable
+//                  number of arguments by bundling them into an array
+
+//                 spread = expands an array into separate elements 
+//                 rest   = bundles separate elements into an array
+
+// function openFridge(...foods){
+//   console.log(...foods);
+// }
+
+
+// const food1 = "pizza";
+// const food2 = "Hotdog";
+// const food3 = "rice";
+// const food4 = "chips";
+
+// openFridge(food1,food2,food3,food4);
+
+function combineString(...names) {
+  return names.join(" ");
+}
+const completeName = combineString("Mr", "Patrick", "Ngunjiri", "Ndung'u", "123");
+console.log(completeName);
+
+//SHOP REVENUE CALCULATOR
+
+let high;
+let lower;
+let numberSales = 0;
+function calculateRevenue(...revenue) {
+  let totalRevenue = 0;
+  high = revenue[0];
+  lower = revenue[0];
+  for (let rev of revenue) {
+    totalRevenue += rev;
+    numberSales++;
+    // high = Math.max(...revenue);
+    // lower = Math.min(...revenue);
+
+    if (rev > high) {
+      high = rev;
+    }
+    if(rev < lower){
+      lower = rev;
+    }
+  }
+  const reven = [totalRevenue, high, lower, numberSales];
+  return reven;
+}
+
+const calculated = calculateRevenue(500, 1200, 300, 200,50);
+const calculat = calculateRevenue(100,250,400,150,600);
+console.log(...calculated);
+console.log(...calculat);

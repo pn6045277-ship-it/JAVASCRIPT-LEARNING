@@ -133,7 +133,7 @@ buyGame.onclick = function () {
     case "Fifa":
       price = 2000;
       break;
-    case  "Minecraft":
+    case "Minecraft":
       price = 1000;
       break;
     case "Fortnite":
@@ -260,7 +260,7 @@ complete.onclick = function () {
   let Discount;
   let status;
   switch (product.value) {
-    case  "Keyboard" :
+    case "Keyboard":
       Price = 45000;
       break;
     case "Speaker":
@@ -295,7 +295,7 @@ complete.onclick = function () {
     document.querySelector(".resultShop").style.display = "none";
     document.getElementById("errors").style.color = "red";
   }
-  else if(Number(custAge.value) < 18 && product.value === "Keyboard" ){
+  else if (Number(custAge.value) < 18 && product.value === "Keyboard") {
     document.getElementById("errors").textContent = "You cannot Purchase this product you are Under age.";
     document.querySelector(".resultShop").style.display = "none";
     document.getElementById("errors").style.color = "red";
@@ -317,8 +317,8 @@ complete.onclick = function () {
   document.getElementById("status").textContent = `Status: ${status}`;
 }
 let user_name = "Patrick";
-let new_name = user_name.trim().charAt(0).toUpperCase()+ user_name.slice(1,2).toLowerCase()+user_name.slice(2,3).toUpperCase()
-+user_name.slice(3).toLowerCase();
+let new_name = user_name.trim().charAt(0).toUpperCase() + user_name.slice(1, 2).toLowerCase() + user_name.slice(2, 3).toUpperCase()
+  + user_name.slice(3).toLowerCase();
 console.log(new_name);
 
 //ARRAYS 
@@ -333,7 +333,7 @@ for (let mark = 0; mark < marks.length; mark++) {
   if (marks[mark] > higher) {
     higher = marks[mark];
   }
-  else if(marks[mark]<smaller){
+  else if (marks[mark] < smaller) {
     smaller = marks[mark];
   }
   console.log(marks[mark]);
@@ -344,3 +344,68 @@ console.log(total);
 console.log(average);
 console.log(`${higher}`);
 console.log(`${smaller}`);
+
+
+let score1 = 0;
+let score2 = 0;
+function diceRoller() {
+  // const numOfDice = document.getElementById("numOfDice").value;
+  const diceResult = document.getElementById("diceResult");
+  const diceImages = document.getElementById("diceImages");
+  const winner = document.getElementById("winner");
+  let win;
+  const values = [];
+  const images = [];
+  for (let i = 1; i < 3; i++) {
+    const rand = Math.floor(Math.random() * 6) + 1;
+    values.push(rand);
+    if (values[0] > values[1]) {
+      win = "Player 1 won";
+      score1++;
+    }
+    else if (values[1] > values[0]) {
+      win = "Player 2 won";
+      score2++;
+    }
+    else {
+      win = "You are draw"
+    }
+    images.push(`<div class="imag"><h2>Player ${i}</h2><img src="pics/${rand}.jpg"></div>`);
+  }
+  document.getElementById("score1").textContent = `Player 1 score : ${score1} points`;
+  document.getElementById("score2").textContent = `Player 2 score : ${score2} points`;
+  winner.textContent = win;
+  diceImages.innerHTML = images.join(" ");
+  diceResult.textContent = `Dice: ${values.join(", ")}`;
+}
+
+//NUMBER GUESSING GAME
+const computerGuess = Math.floor(Math.random() * 100) + 1;
+let attemptTimes = 5;
+function numbGuess() {
+
+  let number = Number(document.getElementById("secret").value);
+  let attempts = document.getElementById("attempts");
+  let guessMessage;
+  if (attemptTimes <= 0 ) {
+      document.getElementById("guessMessage").textContent = `Incorrect!Attempts Over`;
+    return;
+  }
+  if (number == null || isNaN(number)) {
+    guessMessage = "Enter a valid number";
+  }
+  else if (number > computerGuess) {
+    guessMessage = "Too High";
+    attemptTimes--;
+  }
+  else if (number < computerGuess) {
+    guessMessage = "Too Low";
+    attemptTimes--;
+  }
+  else if (number === computerGuess) {
+    guessMessage = "Correct";
+  }
+
+  document.getElementById("guessMessage").textContent = `${guessMessage}`;
+  attempts.textContent = `${attemptTimes}`;
+}

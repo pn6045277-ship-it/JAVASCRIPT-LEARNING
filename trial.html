@@ -120,50 +120,50 @@
     </div>
   </div>
 
-<!-- SMART SHOP CHECKOUT -->
+  <!-- SMART SHOP CHECKOUT -->
 
-<div class="shop">
-  <h1>SMART SHOP CHECKOUT</h1>
-  <div class="input">
-    <label>Customer Name:</label>
-    <input type="text" id="custName"><br>
-        <label>Your Age:</label>
-    <input type="number" id="custAge"><br>
-    <label>Select a Product:</label>
-    <select id="products">
-      <option value="" >-- Select a product --</option>
-      <option value="Keyboard">Keyboard</option>
-      <option value="Microphone">Microphone</option>
-      <option value="Speaker">Speaker</option>
-      <option value="Headphones">Headphones</option>
-    </select><br>
-    <label>Quantity:</label>
-    <input type="number" id="quantity"><br>
-    <label>Your Amount:</label>
-    <input type="number" id="custAmount"><br>
-    <label for="discount">I have a discount code</label>
-    <input type="checkbox" id="discount"><br>
-    <label>Enter discount code(If you have):</label>
-    <input type="number" id="code"><br>
-    <p id="errors" ></p id="errors">
-    <button id="complete">Complete Purchase</button>
+  <div class="shop">
+    <h1>SMART SHOP CHECKOUT</h1>
+    <div class="input">
+      <label>Customer Name:</label>
+      <input type="text" id="custName"><br>
+      <label>Your Age:</label>
+      <input type="number" id="custAge"><br>
+      <label>Select a Product:</label>
+      <select id="products">
+        <option value="">-- Select a product --</option>
+        <option value="Keyboard">Keyboard</option>
+        <option value="Microphone">Microphone</option>
+        <option value="Speaker">Speaker</option>
+        <option value="Headphones">Headphones</option>
+      </select><br>
+      <label>Quantity:</label>
+      <input type="number" id="quantity"><br>
+      <label>Your Amount:</label>
+      <input type="number" id="custAmount"><br>
+      <label for="discount">I have a discount code</label>
+      <input type="checkbox" id="discount"><br>
+      <label>Enter discount code(If you have):</label>
+      <input type="number" id="code"><br>
+      <p id="errors"></p id="errors">
+      <button id="complete">Complete Purchase</button>
+    </div>
   </div>
-</div>
 
-<div class="resultShop">
-  <p id="custname"></p>
-  <p id="prod"></p>
-  <p id="quant"></p>
-  <p id="unitprice"></p>
-  <p id="subtotal"></p>
-  <p id="disc"></p>
-  <p id="total"></p>
-  <p id="paym"></p>
-  <p id="balance"></p>
-  <p id="status"></p>
-</div>
+  <div class="resultShop">
+    <p id="custname"></p>
+    <p id="prod"></p>
+    <p id="quant"></p>
+    <p id="unitprice"></p>
+    <p id="subtotal"></p>
+    <p id="disc"></p>
+    <p id="total"></p>
+    <p id="paym"></p>
+    <p id="balance"></p>
+    <p id="status"></p>
+  </div>
 
-<!-- MINI GAME APP -->
+  <!-- MINI GAME APP -->
   <div class="games">
     <h1>MINI GAME STORE</h1>
     <P>Your favourite games.One Place.</P>
@@ -243,13 +243,13 @@
   </div>
 
   <div class="profile">
-    <label >Full Name *</label>
+    <label>Full Name *</label>
     <input type="text" placeholder="e.g Patrick Ndung'u" id="studentsName">
-    <label >Course *</label>
+    <label>Course *</label>
     <input type="text" placeholder="e.g Mathematics" id="studentsCourse">
-    <label >Year of study*</label>
+    <label>Year of study*</label>
     <input type="number" placeholder="e.g 2" id="studentsYear">
-    <label >Your age *</label>
+    <label>Your age *</label>
     <input type="number" placeholder="e.g 20" id="studentsAge">
     <label>Select Favourite Language*</label>
     <select id="favourite">
@@ -276,8 +276,33 @@
     <p id="myLanguage"></p>
     <p id="mySkills"></p>
     <p id="Ready"></p>
-  </div>
+  </div><br>
 
+  <!-- DICE ROLLER -->
+  <div id="container">
+    <h1>Dice Roller Game</h1>
+    <button type="button" onclick="diceRoller()">Roll Dice</button>
+    <div id="diceResult"></div>
+    <div class="flex-images">
+      <div id="diceImages">
+
+      </div>
+    </div>
+    <p id="score1"></p>
+    <p id="score2"></p>
+    <p id="winner"></p>
+
+  </div>
+  <div class="number-guess">
+    <h2>Can you beat the computer</h2>
+    <p>I'm thinking of a number between 1 and 100</p>
+
+    <input type="number" id="secret" ><br>
+    <button class="guess" onclick="numbGuess()">Guess</button>
+    <h2 id="attempts"></h2>
+    <p id="guessMessage"></p>
+
+  </div>
 
   <footer>
     <ul>
